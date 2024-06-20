@@ -30,7 +30,7 @@ for(let recipe of recipes){
 function check(event){
     const search_value = (event.target.value).toLowerCase();
     const rec = recipes.filter((element)=>{
-        return element.name.toLowerCase().includes(event.target.value);
+        return element.name.toLowerCase().includes(search_value);
     });
     parentElement.innerHTML = "";
     getRecipeCard(rec, parentElement , createElement);
